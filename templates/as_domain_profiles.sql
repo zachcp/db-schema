@@ -6,7 +6,7 @@ CREATE TABLE "{{DATABASE}}"."as_domain_profiles" (
     CONSTRAINT as_domain_profiles_pkey PRIMARY KEY (as_domain_profile_id)
 );
 
-COMMENT ON TABLE antismash.as_domain_profiles IS
+COMMENT ON TABLE "{{DATABASE}}"."as_domain_profiles" IS
   'A functional secondary metabolite domain profile predicted by antiSMASH';
 
 INSERT INTO "{{DATABASE}}"."as_domain_profiles" (name, description, database)

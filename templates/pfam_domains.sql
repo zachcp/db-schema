@@ -14,7 +14,7 @@ CREATE TABLE "{{DATABASE}}"."pfam_domains" (
     CONSTRAINT pfam_domains_cds_id_fkey FOREIGN KEY (cds_id) REFERENCES "{{DATABASE}}"."cdss" (cds_id) ON DELETE CASCADE
 );
 
-COMMENT ON TABLE "{{DATABASE}}".pfam_domains IS
+COMMENT ON TABLE "{{DATABASE}}"."pfam_domains" IS
   'A PFAM domain prediction';
 
 CREATE INDEX pfam_domains_cds_id_idx ON "{{DATABASE}}"."pfam_domains" (cds_id);

@@ -1,4 +1,4 @@
-CREATE TABLE antismash.compounds (
+CREATE TABLE "{{DATABASE}}"."compounds" (
     compound_id	serial NOT NULL,
     smile_structure	text,
     peptide_sequence	text,
@@ -13,8 +13,8 @@ CREATE TABLE antismash.compounds (
     CONSTRAINT compounds_pkey PRIMARY KEY (compound_id)
 );
 
-COMMENT ON TABLE antismash.compounds IS
+COMMENT ON TABLE "{{DATABASE}}"."compounds" IS
   'A (predicted) checical compound.';
 
-CREATE INDEX compounds_peptides_sequence_idx ON antismash.compounds (peptide_sequence);
-CREATE INDEX compounds_locus_tag_idx ON antismash.compounds (locus_tag);
+CREATE INDEX compounds_peptides_sequence_idx ON "{{DATABASE}}"."compounds" (peptide_sequence);
+CREATE INDEX compounds_locus_tag_idx ON "{{DATABASE}}"."compounds" (locus_tag);

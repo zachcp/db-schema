@@ -6,5 +6,5 @@ CREATE TABLE "{{DATABASE}}"."bgc_rules" (
     CONSTRAINT bgc_rules_bgc_type_id_fkey FOREIGN KEY (bgc_type_id) REFERENCES "{{DATABASE}}"."bgc_types" (bgc_type_id)
 );
 
-COMMENT ON TABLE antismash.bgc_rules IS
+COMMENT ON TABLE "{{DATABASE}}"."bgc_rules" IS
   'The detection rule used for a specific BGC type';
